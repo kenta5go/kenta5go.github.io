@@ -3,8 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # 公開したいブランチ名 (通常は main)
-
+      - main
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -16,4 +16,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # このディレクトリにあるファイルを公開します
+          publish_dir: ./slimegame
